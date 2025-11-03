@@ -19,7 +19,10 @@
 
 #include <stddef.h>
 #include <stdint.h>
+
 #include "sha256.h"
+
+#define HMAC_SHA256_DIGEST_SIZE SHA256_DIGEST_SIZE
 
 /*
  * Compute HMAC-SHA256
