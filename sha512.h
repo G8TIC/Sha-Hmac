@@ -2,7 +2,7 @@
  * sha512.h - simple, portable SHA-512 implementation (C11, procedural)
  *
  * SPDX-License-Identifier: MIT
- * Copyright (c) 2025
+ * Copyright (C) 2025 Mike Tubby G8TIC mike@tubby.org and contributors
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -12,6 +12,7 @@
  * furnished to do so, subject to the following conditions:
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+ *
  */
 
 #ifndef _SHA512_H
