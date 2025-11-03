@@ -1,45 +1,45 @@
-# Sha-Hmac :: Modern implementations of SHA256/512 and HMAC-SHA256/512
+# Sha-Hmac :: Modern SHA256/512 and HMAC-SHA256/512
 
-I have been using SHA256 and SHA512 in communications protocols on embedded
-systems in C since they have existed but always with overly complex reference
-code, code borrowed from crypto libraries, or versions found on the internet
-with questional parentage such as those where ownership is claimed by Apple
-or Google.
+## Background
 
-I decided that for embedded systems I needed my own implementation which was:
+I have been using SHA256 and SHA512 in embedded systems they have existed but
+always with overly complex reference code, code borrowed from crypto libraries,
+or versions found on the internet with questional parentage such as those where
+ownership is claimed by Apple or Google.
 
-* modern and clean code
-* written in procedural C compatible with C11
-* designed for standalone use
-* portable across a wide range of systems
-* compiler agnostic
-* simple API calling conventions
-* easy to read, understand and maintain
-* provided with unit tests against NIST test vectors
-* written by me
-* provided with a permissive license (in this case MIT)
+## Goals and objectives
+
+I decided that for embedded systems I needed my own implementation which:
+
+* uses modern and clean, procedural C11 code
+* is designed for standalone use
+* is portable across a wide range of systems
+* is compiler agnostic
+* has simple API calling conventions
+* is easy to read, understand and maintain
+* includes unit tests against NIST test vectors
+* uses a permissive license (in this case MIT)
 
 
-## Modern and clean 
+### Modern and clean C11
 
-Modern and clean code to the C11 standard.
+Written to be modern and clean code using prodecural C to the C11 standard.
 
-## Standalone operation
+### Standalone operation
 
 Code is complete, in place, and makes no use of libraries or other source.
 
-## Portable
+### Portable
 
-As the code is written in plain prodedural C (C11) it should compile and
-work on a wide range of systems.
+As the code is written in plain prodedural C it should compile and work on a wide range of systems.
 To date its been used on 64-bit AMD (x86) and 64-bit ARM.
 
-## Compiler agnostic
+### Compiler agnostic
 
 While the code was developed using GCC it uses only standard C11 subset so
 should work on any C11 compliant compiler.
 
-## Simple APIs
+### Simple APIs
 
 While you can delve in to the innards and do things in parts, in most cases
 you just want the single shot function, for example:
@@ -47,9 +47,9 @@ you just want the single shot function, for example:
 sha256(uint8_t *out, uint_t *msg, size_t msglen)
 ```
 
-## Unit tests
+### Unit tests
 
 Each module includes a test harness with the NIST test vectors.
 
-All four mobiles can be tested using the unit_tests.sh script.
+All four modules can be tested using the unit_tests.sh script.
 
