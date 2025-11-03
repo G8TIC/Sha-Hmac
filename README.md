@@ -2,11 +2,11 @@
 
 I have been using SHA256 and SHA512 in communications protocols on embedded
 systems in C since they have existed but always with overly complex reference
-code, code stolen from crypto libraries, or versions found on the internet
+code, code borrowed from crypto libraries, or versions found on the internet
 with questional parentage such as those where ownership is claimed by Apple
 or Google.
 
-I decided that for embedded systems I needed my own implementation which:
+I decided that for embedded systems I needed my own implementation which was:
 
 * modern and clean code
 * written in procedural C compatible with C11
@@ -16,6 +16,8 @@ I decided that for embedded systems I needed my own implementation which:
 * simple API calling conventions
 * easy to read, understand and maintain
 * provided with unit tests against NIST test vectors
+* written by me
+* provided with a permissive license (in this case MIT)
 
 
 ## Modern and clean 
