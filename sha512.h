@@ -14,15 +14,11 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
  */
 
-#ifndef SHA512_H
-#define SHA512_H
+#ifndef _SHA512_H
+#define _SHA512_H
 
 #include <stdint.h>
 #include <stddef.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 #define SHA512_BLOCK_SIZE   128
 #define SHA512_DIGEST_SIZE  64
@@ -35,23 +31,9 @@ typedef struct {
     size_t buffer_len;
 } sha512_ctx;
 
-/* initialize context */
 void sha512_init(sha512_ctx *ctx);
-
-/* process input bytes */
 void sha512_update(sha512_ctx *ctx, const uint8_t *data, size_t len);
-
-/* finalize and produce digest (64 bytes) */
 void sha512_final(sha512_ctx *ctx, uint8_t out[SHA512_DIGEST_SIZE]);
-
-/* convenience one-shot */
 void sha512(uint8_t out[SHA512_DIGEST_SIZE], const uint8_t *data, size_t len);
 
-/* self-test (returns 0 on success, non-zero on failure) */
-int sha512_selftest(void);
-
-#ifdef __cplusplus
-}
 #endif
-
-#endif /* SHA512_H */

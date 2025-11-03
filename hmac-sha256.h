@@ -14,8 +14,8 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
  */
 
-#ifndef HMAC_SHA256_H
-#define HMAC_SHA256_H
+#ifndef _HMAC_SHA256_H
+#define _HMAC_SHA256_H
 
 #include <stddef.h>
 #include <stdint.h>

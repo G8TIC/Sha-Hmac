@@ -15,8 +15,8 @@
  *
  */
 
-#ifndef SHA256_H
-#define SHA256_H
+#ifndef _SHA256_H
+#define _SHA256_H
 
 #include <stddef.h>
 #include <stdint.h>
@@ -40,10 +40,5 @@ void sha256_update(sha256_ctx *ctx, const uint8_t *data, size_t len);
 void sha256_final(sha256_ctx *ctx, uint8_t out[SHA256_DIGEST_SIZE]);
 void sha256(uint8_t out[SHA256_DIGEST_SIZE], const uint8_t *data, size_t len);
 int  sha256_compare(uint8_t *a, uint8_t *b);
-
-#ifdef SHA256_TESTING
-/* Self-test using NIST known-answer vectors (returns 0 if OK, 1 if failed) */
-int sha256_selftest(void);
-#endif
 
 #endif

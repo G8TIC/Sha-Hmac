@@ -22,7 +22,6 @@ I decided that for embedded systems I needed my own implementation which:
 
 Modern and clean code to the C11 standard.
 
-
 ## Standalone operation
 
 Code is complete, in place, and makes no use of libraries or other source.
@@ -42,13 +41,13 @@ should work on any C11 compliant compiler.
 
 While you can delve in to the innards and do things in parts, in most cases
 you just want the single shot function, for example:
-
-sha256(uint8_t *out, uintt_t *msg, size_t msglen)
+```
+sha256(uint8_t *out, uint_t *msg, size_t msglen)
+```
 
 ## Unit tests
 
 Each module includes a test harness with the NIST test vectors.
 
 All four mobiles can be tested using the unit_tests.sh script.
-
 
